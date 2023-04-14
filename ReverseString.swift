@@ -1,8 +1,14 @@
-import Foundation
+//
+// ReverseString.swift
+//
+//  Created by Nicolas Riscalas
+//  Created on 2023-04-13
+//  Version 1.0
+//  Copyright (c) 2023 Nicolas Riscalas. All rights reserved.
+//
+//  Reverses a string
 
-/**
- * Reads a file and reverses each line.
- */
+import Foundation
 
 // Define a function to reverse a string
 func reverseString(_ str: String) -> String {
@@ -20,13 +26,13 @@ let outputFilePath = "output.txt"
 if let inputString = try? String(contentsOfFile: inputFilePath) {
     // Separate the input into lines
     let inputLines = inputString.components(separatedBy: .newlines)
-    
+
     // Reverse each line
     var reversedLines = [String]()
     for line in inputLines {
         reversedLines.append(reverseString(line))
     }
-    
+
     // Write output to file
     let outputString = "Reversed lines: \n" + reversedLines.joined(separator: "\n")
     do {
